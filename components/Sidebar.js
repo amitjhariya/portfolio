@@ -34,7 +34,7 @@ function Sidebar() {
       aria-label="Sidebar"
     >
       <motion.div initial={{ x: -300 }} animate={{ x: 0 }}
-      className="flex flex-col ">
+      className="flex flex-col z-20">
         <div className="py-3 flex justify-end">
           <HiMenuAlt3
             size={26}

@@ -1,7 +1,7 @@
-import Header from "../components/Header";
+"use client";
 import Sidebar from "../components/Sidebar";
 import './../styles/globals.css'
-
+import Particles from '../components/Particles/particles'
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
         {/* <Header /> */}
         <Sidebar/>
         {children}
+        <Particles id="tsparticles" />
       </body>
     </html>
   );
