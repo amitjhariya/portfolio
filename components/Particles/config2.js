@@ -10,7 +10,7 @@ const config ={
       limit: 200,
       density: {
         enable: true,
-        value_area: 800
+        value_area: 2000
       }
     },
     color: {
@@ -86,7 +86,7 @@ const config ={
         }
       },
       onClick: {
-        enable: true,
+        enable: false,
         mode: "push"
       },
       resize: true

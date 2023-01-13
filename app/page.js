@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import AnimatedLetters from "./../components/AnimatedLetters/index";
-import Loader from "react-loaders";
+import { PageWrapper } from "./wrapper";
+
 
 export default function Page() {
   const [letterClass, setLetterClass] = useState("");
@@ -20,11 +21,11 @@ export default function Page() {
   }, []);
 
   return (
-    <motion.div animate={{ x: 100 }} className="m-4">
-      <div className="relative px-6 lg:px-8">
+    <>
+    <PageWrapper>
+    <div className="relative px-6 lg:px-8">
         <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
           <div>
-          <Loader type="pacman" />
             <span className={`${letterClass} _1`}>H</span>
             <span className={`${letterClass} _2`}>i,</span>
             <br />
@@ -41,19 +42,19 @@ export default function Page() {
               letterClass={letterClass}
               idx={15}
             />
-            <p className="mt-6 text-lg leading-8 text-gray-100 ">
+            <p className="mt-6 text-lg leading-8 text-gray-100 duration-1000">
               Senior Software Engineer with experience in Frontend development
               using React and Next JS, and Backend development using Node.JS,
               Express.JS, PHP, and MySQL.I'm interested in working in a learning
               and challenging environment and has experience in various aspects
               of the software development lifecycle including analyzing,
               designing, developing, testing, debugging, and deploying.
-            </p>            
+            </p>
           </div>
         </div>
       </div>
+    </PageWrapper>
       
-    </motion.div>
-    
+    </>
   );
 }
